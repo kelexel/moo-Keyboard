@@ -42,29 +42,27 @@ Control-keys must be specified as objects, containing at least:
 
 Here are two examples:
 
-```js
-window.addEvent('domready', function() {
+	window.addEvent('domready', function() {
 
-	// Create a virtual (azerty in this case) keyboard, including "delete", "space", "return" (newline), and "send" control-keys.
-	_k1 = new Keyboard({
-			'container': 'k1', 
-			'wrap': 10, 
+		// Create a virtual (azerty in this case) keyboard, including "delete", "space", "return" (newline), and "send" control-keys.
+		_k1 = new Keyboard({
+				'container': 'k1', 
+				'wrap': 10, 
+				'chars': [
+					'a','z','e','r','t','y','u','i','o','p','q','s','d','f','g','h','j','k','l','m','w','x','c','v','b','n',',','.','?','!', {'key': 'space', 'legend': 'Space', 'class': 'space'}, {'key': 'delete', 'legend': 'Delete', 'class': 'delete'}, {'key': 'return', 'class': 'return', 'legend': 'Return', 'class': 'return'}, {'key': 'send',  'legend': 'Send', 'class': 'send'}
+				]
+		});
+
+		// Create a virtual pinpad, including "delete" and "send" control-keys
+		_k2 = new Keyboard({
+			'container': 'k2',
+			'wrap': 3,
+			'maxChars': 4,
 			'chars': [
-				'a','z','e','r','t','y','u','i','o','p','q','s','d','f','g','h','j','k','l','m','w','x','c','v','b','n',',','.','?','!', {'key': 'space', 'legend': 'Space', 'class': 'space'}, {'key': 'delete', 'legend': 'Delete', 'class': 'delete'}, {'key': 'return', 'class': 'return', 'legend': 'Return', 'class': 'return'}, {'key': 'send',  'legend': 'Send', 'class': 'send'}
+				'1','2','3','4','5','6','7','8','9',{'key': 'delete', 'legend': 'Del'},'0', {'key': 'send', 'legend': 'Ok'}
 			]
+		});
 	});
-
-	// Create a virtual pinpad, including "delete" and "send" control-keys
-	_k2 = new Keyboard({
-		'container': 'k2',
-		'wrap': 3,
-		'maxChars': 4,
-		'chars': [
-			'1','2','3','4','5','6','7','8','9',{'key': 'delete', 'legend': 'Del'},'0', {'key': 'send', 'legend': 'Ok'}
-		]
-	});
-});
-```
 
 Screenshots
 -----------
