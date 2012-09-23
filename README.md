@@ -1,15 +1,13 @@
 moo-Keyboard
 ===========
 
-This is a virtual-keyboard.
+A multi-uses Mootools virtual-keyboard.
 
-It can display any layout you want, including alphabetical keyboards, pinpads, and some control-keys.
+It can display any layout you want, including alphabetical keyboards, pinpads, including *some* control-keys.
 
 Keys can be specified in any order you like.
 
-Control-keys can be specified a *legend* and *class*-name.
-
-The keyboard layout is fully auto-resizable thanks to CSS goodness.
+The keyboard layout is fully auto-resizable thanks to some CSS goodness.
 
 * 0.1 : initial release
 
@@ -44,7 +42,9 @@ Control-keys must be specified as objects, containing at least:
 
 Here are two examples:
 
+```
 window.addEvent('domready', function() {
+
 	// Create a virtual (azerty in this case) keyboard, including "delete", "space", "return" (newline), and "send" control-keys.
 	_k1 = new Keyboard({
 			'container': 'k1', 
@@ -64,6 +64,7 @@ window.addEvent('domready', function() {
 		]
 	});
 });
+```
 
 Screenshots
 -----------
