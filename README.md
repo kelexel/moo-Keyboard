@@ -1,7 +1,7 @@
 moo-Keyboard
 ===========
 
-A multi-uses Mootools virtual-keyboard.
+A multi-use Mootools virtual-keyboard.
 
 It can display any layout you want, including alphabetical keyboards, pinpads, including *some* control-keys.
 
@@ -22,7 +22,7 @@ Include mootools-core, than include moo-Keyboard.js in your document HEAD
 
 moo-Keyboard.js accepts three arguments as options:
 
-* container: the parent container where to inject the keyboard. This assumes the container contains two DIVs, one with class "keybPreview" (where the typed keys will be injected), one with class "keyKeys" (where the keyboard keys will be injected)
+* container: the parent container where to inject the keyboard. This assumes the container contains two DIVs, one with class "keybPreview" (where the typed keys will be injected), one with class "keybKeys" (where the keyboard keys will be injected)
 
 * wrap: how many keyboard keys to display on a row.
 
@@ -42,7 +42,7 @@ Control-keys must be specified as objects, containing at least:
 
 Here are two examples:
 
-```
+```js
 window.addEvent('domready', function() {
 
 	// Create a virtual (azerty in this case) keyboard, including "delete", "space", "return" (newline), and "send" control-keys.
