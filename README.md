@@ -11,9 +11,11 @@ The keyboard layout is fully auto-resizable thanks to some CSS goodness.
 
 * 0.1 : initial release
 
+* 0.2 : added support for images as keyboard keys
+
 Tested with Mootools-Core 1.4.5
 
-[Demo](https://tinker.io/af1ff)
+[Demo](https://tinker.io/af1ff/4)
 
 How to use
 ----------
@@ -39,6 +41,8 @@ Control-keys must be specified as objects, containing at least:
 * 'legend', the name displayed in the keyboard key button
 
 * 'class', an optional CSS class to apply to the keyboard key button
+
+* 'img', link to a jpg/png/gif to be used as the keyboard key
 
 Here are two examples:
 
