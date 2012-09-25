@@ -1,3 +1,21 @@
+/*
+---
+description: Mootools Keyboard Decorator.
+
+license: GPL
+
+authors:
+- Rudolph Sand
+
+requires: 
+- core/1.4.5
+
+provides: [MooKeyboardDecorator]
+
+version: 0.2
+
+...
+*/
 var MooKeyboardDecorator = new Class({
 	Implements: Options,
 	options: {},

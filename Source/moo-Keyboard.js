@@ -10,9 +10,9 @@ authors:
 requires: 
 - core/1.4.5
 
-provides: [Keyboard]
+provides: [MooKeyboard]
 
-version: 0.2
+version: 0.3
 
 ...
 */
