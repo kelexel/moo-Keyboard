@@ -17,7 +17,7 @@ The keyboard layout is fully auto-resizable thanks to some CSS goodness.
 
 Tested with Mootools-Core 1.4.5 on Firefox-15.x and IE-10
 
-[Demo](https://tinker.io/af1ff/13)
+[Demo](https://tinker.io/af1ff/15)
 
 How to use
 ----------
