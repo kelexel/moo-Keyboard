@@ -1,0 +1,57 @@
+.keybPreview {
+	height: 300px;
+	border: 1px #333 solid;
+	font-family: arial;
+	font-size: 4em;
+	letter-spacing: 0.1em;
+	padding: 3%;
+	width: 94%;
+	text-transform: uppercase;
+}
+.keybPreview span {
+	display: inline-block;
+}
+.keybCaret {
+	border-right: 1px #000 solid;
+	width: 4px;
+	height: 42px;
+	display: inline-block;
+	background-color: #000;
+}
+.keybKeys {
+	width: 100%;
+	margin: 0 auto;
+	padding: 2px;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+.keybKeys a {
+	display: inline-block;
+	/*width: 10%;*/
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	outline: #000;
+	outline: 1px #eee solid;
+	cursor: pointer;
+}
+.keybKeys a:hover {
+	background-color: #eee;
+	outline-offset: -5px;
+}
+.keybKeys a:active {
+	outline: 1px #333 solid;
+	background-color: #fff;
+}
+.keybKeys a.space {
+	width: 80%;
+}
+.keybKeys a.delete {
+	width: 10%;
+}
+.keybKeys a.return {
+	width: 10%;
+}
+
