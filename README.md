@@ -43,6 +43,8 @@ moo-Keyboard.js accepts several arguments as options:
 
 * onComplete: a callback function to run when the user hits the "send" custom-key.
 
+* onShift: a callback function to run if/when the "shift" custom-key is hit - for instance, can be used to swap layouts (default callback does a simple text-transform:uppercase|lowercase; )
+
 Custom-keys must be specified as objects, containing at least:
 
 * 'key', must be of the kind: 'space' | 'delete' | 'return' | 'send' | 'shift'
