@@ -12,7 +12,7 @@ requires:
 
 provides: [MooKeyboard]
 
-version: 0.3
+version: 0.4
 
 ...
 */
@@ -21,8 +21,8 @@ var MooKeyboard = new Class({
 	Implements: [Options, Events],
 	options: {
 		container: false,
-		attributes: {},
-		chars: [],
+		layout: false,
+		layouts: {},
 		wrap: 10,
 		maxChars: 100,
 		onComplete: function() { console.log(this._phrase.join("")); }
@@ -40,13 +40,19 @@ var MooKeyboard = new Class({
 		this._caret = this._container.getElement('.keybCaret');
 		if (!this._caret) return;
 		this._keys = this._container.getElement('.keybKeys');
-		this._draw()._attachEvents();
-
+		this._attachEvents();
+	},
+	setLayout: function(layout) {
+		if (!this.options.layouts[layout]) return false;
+		this._chars = this.options.layouts[layout];
+		this._keys.set('html', '');
+		return this._draw();
 	},
 	_draw: function() {
 		var c = 0;
 		var mw = this._container.getSize().x.toInt();
-		Array.each(this.options.chars, function(char) {
+		if (this._chars.length == 0) return this;
+		Array.each(this._chars, function(char) {
 			if (typeOf(char) != 'object')
 				new Element('a', {'html': char}).inject(this._keys).setStyle('width', Math.round(100/this.options.wrap)+'%');
 			else {
