@@ -15,7 +15,7 @@ The keyboard layout is fully auto-resizable thanks to some CSS goodness.
 
 * 0.3 : use CSS3 animation instead of JS animation for caret fx, if you want JS anim instead use tag 0.2 + added MooKeyboardDecorator.js + added fx.css + added 'shift' key
 
-* O.4 : added layouts support *** warning read install nodes, option "chars" is deprecated ! + added onShift event (i.e.: to toggle a different layout when shift is pressed)
+* 0.4 : added layouts support *** warning read install nodes, option "chars" is deprecated ! + added onShift event (i.e.: to toggle a different layout when shift is pressed)
 
 Tested with Mootools-Core 1.4.5 on Firefox-15.x and IE-10
 

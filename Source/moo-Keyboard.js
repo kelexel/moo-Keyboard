@@ -25,7 +25,15 @@ var MooKeyboard = new Class({
 		layouts: {},
 		wrap: 10,
 		maxChars: 100,
-		onComplete: function() { console.log(this._phrase.join("")); }
+		onComplete: function() {
+			console.log(this._phrase.join(""));
+		},
+		onShift: function() { 
+			if (this._keys.getStyle('text-transform') == 'uppercase')
+				this._keys.setStyle('text-transform', 'lowercase');
+			else
+				this._keys.setStyle('text-transform', 'uppercase');
+		}
 	},
 	_phrase: [],
 	_bound: {},
@@ -80,11 +88,7 @@ var MooKeyboard = new Class({
 		if (el.get('rel') && el.get('rel') == 'send')
 			return this.fireEvent('complete');
 		else if (el.get('rel') && el.get('rel') == 'shift') {
-			if (this._keys.getStyle('text-transform') == 'uppercase')
-				this._keys.setStyle('text-transform', 'lowercase');
-			else
-				this._keys.setStyle('text-transform', 'uppercase');
-			return;
+			return this.fireEvent('shift');
 		}
 		else if (el.get('rel') && el.get('rel') == 'delete') {
 			if (this._phrase.length < 1) return;
